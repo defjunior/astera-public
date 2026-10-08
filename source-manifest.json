@@ -1,0 +1,816 @@
+{
+  "source_repo": "defjunior/Astera",
+  "verified_date": "2026-10-08",
+  "comparison_note": "Live destination hash/readback checked after method-balance and exact omission-comment revision; source selection verified against live Astera; no runtime validation. Private, owner review pending, earlier full code remains in history.",
+  "files": [
+    {
+      "path": "src/ServerScriptService/Dungeon/init.lua",
+      "source_sha256": "2121a6f4c5a724110cee519f6e416195895c5294b4938b4fb31d868d0ffefb65",
+      "output_sha256": "2121a6f4c5a724110cee519f6e416195895c5294b4938b4fb31d868d0ffefb65",
+      "modified": false,
+      "lines": 21
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/DungeonSystem.lua",
+      "source_sha256": "608836698679dd9821d6b88b5e437a1deca39bb049c425edd44565572f621cad",
+      "output_sha256": "608836698679dd9821d6b88b5e437a1deca39bb049c425edd44565572f621cad",
+      "modified": false,
+      "lines": 866
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Archetypes/init.lua",
+      "source_sha256": "c4785f9356437e1299bc1a58f7739a94a9800c03f2a29d7e84cce3d5afe7b8fe",
+      "output_sha256": "c4785f9356437e1299bc1a58f7739a94a9800c03f2a29d7e84cce3d5afe7b8fe",
+      "modified": false,
+      "lines": 4
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Archetypes/DungeonArchetypeDB.lua",
+      "source_sha256": "9af84a3128f41fc03b3d2b2641c46fd779ecd5a2557dc741f31156c46a9a53ab",
+      "output_sha256": "2abd06ad8f6912cdeaa2f55b7c91327c254b87bb80a75117a28cfeb2012650a1",
+      "modified": true,
+      "lines": 45
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Archetypes/DungeonArchetypeTypes.lua",
+      "source_sha256": "d762ed7e459afbac016d90f2ae7e2a60c3c25dd5d91b4e6cc275e946b4b5c4d8",
+      "output_sha256": "d762ed7e459afbac016d90f2ae7e2a60c3c25dd5d91b4e6cc275e946b4b5c4d8",
+      "modified": false,
+      "lines": 101
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Rooms/init.lua",
+      "source_sha256": "d6bebc13cfc39f80610cd757d2dc9cdf15e7c0f696afa1f488dd63658baa141c",
+      "output_sha256": "d6bebc13cfc39f80610cd757d2dc9cdf15e7c0f696afa1f488dd63658baa141c",
+      "modified": false,
+      "lines": 6
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Rooms/RoomPatternLibrary.lua",
+      "source_sha256": "e781526cb1066c5ef40bb9e7f970eb44d314ccc4e6e1713cce3bc7c6453c0bb6",
+      "output_sha256": "dbb819215a01495db31c1d5b9b57bfbb1afe39a551c6810b87d1bc8c350d845f",
+      "modified": true,
+      "lines": 461
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Rooms/RoomTypeDB.lua",
+      "source_sha256": "afab091c4d0702029689b5b46b7ff2c9d883f23d6810f1c102ca58289fbd5f8e",
+      "output_sha256": "158a72413dad8c847efdbb81a3919a1a1e5306b5f38f337f921cbd6cde7acc35",
+      "modified": true,
+      "lines": 44
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Rooms/RoomRuleEvaluator.lua",
+      "source_sha256": "8246555d0d472a414d703bded686502aaeb650b15c7603e81480d0f04c2d7b47",
+      "output_sha256": "8246555d0d472a414d703bded686502aaeb650b15c7603e81480d0f04c2d7b47",
+      "modified": false,
+      "lines": 468
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Rooms/RoomTypeTypes.lua",
+      "source_sha256": "c2a32adcc30053c43d08deebf10a0aeb9b6ec8deccf49c12c75143395b846f86",
+      "output_sha256": "c2a32adcc30053c43d08deebf10a0aeb9b6ec8deccf49c12c75143395b846f86",
+      "modified": false,
+      "lines": 84
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Decor/init.lua",
+      "source_sha256": "47eda8824103dd5c2813e57e86e7761fe6386d75d206d63aafcb31deac5f9824",
+      "output_sha256": "47eda8824103dd5c2813e57e86e7761fe6386d75d206d63aafcb31deac5f9824",
+      "modified": false,
+      "lines": 23
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Decor/DungeonScatterModule.lua",
+      "source_sha256": "e5f5fd74989f50552a74afa93a53373b6eb94fa4cccf1ae4de08215d28f5cdbf",
+      "output_sha256": "e5f5fd74989f50552a74afa93a53373b6eb94fa4cccf1ae4de08215d28f5cdbf",
+      "modified": false,
+      "lines": 129
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Decor/DungeonVariantModule.lua",
+      "source_sha256": "3f6064c26ab0fbdb1f611a03e2d2e0696f5d91d853999045bae8a4416077f83f",
+      "output_sha256": "3f6064c26ab0fbdb1f611a03e2d2e0696f5d91d853999045bae8a4416077f83f",
+      "modified": false,
+      "lines": 136
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Decor/DungeonDecorationModule.lua",
+      "source_sha256": "a386b20e368ea84dafb326dd5866439031d29f43aa6d2a7b81940bd77757f7b6",
+      "output_sha256": "a386b20e368ea84dafb326dd5866439031d29f43aa6d2a7b81940bd77757f7b6",
+      "modified": false,
+      "lines": 2630
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Decor/DungeonSurfacePlacementModule.lua",
+      "source_sha256": "dc86747a542bb7a57e3cceb0f7468469321eb3b13cbc235fa14a748b8ce713b7",
+      "output_sha256": "dc86747a542bb7a57e3cceb0f7468469321eb3b13cbc235fa14a748b8ce713b7",
+      "modified": false,
+      "lines": 260
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Decor/DungeonRoofModule.lua",
+      "source_sha256": "d1ed3a5a7fb6cd929940a8f23fdef57cf5e975128096bf02c0782f0866cbb434",
+      "output_sha256": "d1ed3a5a7fb6cd929940a8f23fdef57cf5e975128096bf02c0782f0866cbb434",
+      "modified": false,
+      "lines": 256
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Decor/DungeonStructuralPropPlanner.lua",
+      "source_sha256": "c717a12a744202514e56ff65ab6339f28842b35ec35f0f09dee4c9213bff6a3f",
+      "output_sha256": "c717a12a744202514e56ff65ab6339f28842b35ec35f0f09dee4c9213bff6a3f",
+      "modified": false,
+      "lines": 1107
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Decor/DungeonMessPileModule.lua",
+      "source_sha256": "d17d48ab9b786b012d0f44be6ee28c2d22a1798aa2faedbbb22e00176fa5ea34",
+      "output_sha256": "d17d48ab9b786b012d0f44be6ee28c2d22a1798aa2faedbbb22e00176fa5ea34",
+      "modified": false,
+      "lines": 220
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Decor/DungeonWritingVariantModule.lua",
+      "source_sha256": "fdf530363c997b55699c2f00e62020764540f6b18520d28ea088fb960e933237",
+      "output_sha256": "fdf530363c997b55699c2f00e62020764540f6b18520d28ea088fb960e933237",
+      "modified": false,
+      "lines": 113
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Decor/DungeonArchetypeModule.lua",
+      "source_sha256": "e6d3048169e28262afe1e32a790d2bbeea3fcbd32dfa0f316f779c95ebbe5514",
+      "output_sha256": "e6d3048169e28262afe1e32a790d2bbeea3fcbd32dfa0f316f779c95ebbe5514",
+      "modified": false,
+      "lines": 159
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Decor/DungeonAssetRegistry.lua",
+      "source_sha256": "e77274bda0043b8ae9f83b96922fe6fc05b36a4eaf096745fd7007d58f379289",
+      "output_sha256": "e77274bda0043b8ae9f83b96922fe6fc05b36a4eaf096745fd7007d58f379289",
+      "modified": false,
+      "lines": 116
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/init.lua",
+      "source_sha256": "8f9b8a3c2dca68741088ded88120494147069f9d7c7d35b559fff80a2a6c7b95",
+      "output_sha256": "8f9b8a3c2dca68741088ded88120494147069f9d7c7d35b559fff80a2a6c7b95",
+      "modified": false,
+      "lines": 12
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/StairPlanner.lua",
+      "source_sha256": "28048d2925c9c5874ac5ef799230e0433dc20c033ca652e4f4eb16859ea2646a",
+      "output_sha256": "28048d2925c9c5874ac5ef799230e0433dc20c033ca652e4f4eb16859ea2646a",
+      "modified": false,
+      "lines": 519
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/DungeonBuildState.lua",
+      "source_sha256": "ac82cf25892bc754fd5fe83655e7df420d2e16107fe8e12f46e619b5953f7bc8",
+      "output_sha256": "ac82cf25892bc754fd5fe83655e7df420d2e16107fe8e12f46e619b5953f7bc8",
+      "modified": false,
+      "lines": 44
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/DungeonGenerator.lua",
+      "source_sha256": "1a61ae2964da78ca8178e32abb8b42eca10736cdaa21a0e1077800e99aef24d0",
+      "output_sha256": "1a61ae2964da78ca8178e32abb8b42eca10736cdaa21a0e1077800e99aef24d0",
+      "modified": false,
+      "lines": 828
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/HallwayCarver.lua",
+      "source_sha256": "3bd3c9b449a1f1d57c9aee5815852668da63761c4fcdbda92a6735f0628295e4",
+      "output_sha256": "3bd3c9b449a1f1d57c9aee5815852668da63761c4fcdbda92a6735f0628295e4",
+      "modified": false,
+      "lines": 1060
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/BinaryHeap.lua",
+      "source_sha256": "9eb238dd2d4fb7bc51d2a692b3cc50435c8b1c8b455d487eb542826a1360c27a",
+      "output_sha256": "9eb238dd2d4fb7bc51d2a692b3cc50435c8b1c8b455d487eb542826a1360c27a",
+      "modified": false,
+      "lines": 106
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/Grid3D.lua",
+      "source_sha256": "aa9b6c416e42d0efdb4fb0e08f4dbaf3ffb07f2bf350f982d76a2d7ec70651f3",
+      "output_sha256": "aa9b6c416e42d0efdb4fb0e08f4dbaf3ffb07f2bf350f982d76a2d7ec70651f3",
+      "modified": false,
+      "lines": 92
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/RoomPlacer.lua",
+      "source_sha256": "e8ef17fb52eff871c6ea583c2da2a90ee5784a441ae6f6a9e8beba1f97e82235",
+      "output_sha256": "e8ef17fb52eff871c6ea583c2da2a90ee5784a441ae6f6a9e8beba1f97e82235",
+      "modified": false,
+      "lines": 109
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/DungeonGenerationContracts.lua",
+      "source_sha256": "6051faa01b1f96dadbc95f1b0507f717beca3894e7ebe45ba059d34890244d10",
+      "output_sha256": "6051faa01b1f96dadbc95f1b0507f717beca3894e7ebe45ba059d34890244d10",
+      "modified": false,
+      "lines": 132
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/LayoutBuilder.lua",
+      "source_sha256": "e66e9d495fb8022a98a6ecf60680d20cb473749685d9849178d68fbc4723097e",
+      "output_sha256": "e66e9d495fb8022a98a6ecf60680d20cb473749685d9849178d68fbc4723097e",
+      "modified": false,
+      "lines": 633
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/DungeonTypes.lua",
+      "source_sha256": "5a083e43f21a041337412cd8969fd6a8473222ea95192858f80617ad1d3247bd",
+      "output_sha256": "5a083e43f21a041337412cd8969fd6a8473222ea95192858f80617ad1d3247bd",
+      "modified": false,
+      "lines": 133
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/DungeonParameterMap.lua",
+      "source_sha256": "dfa89bce30b8fb790356aff8518ac1cfc5a35b624cc32a4dad5fddbf5beefe42",
+      "output_sha256": "dfa89bce30b8fb790356aff8518ac1cfc5a35b624cc32a4dad5fddbf5beefe42",
+      "modified": false,
+      "lines": 343
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Generation/RoomGraphBuilder.lua",
+      "source_sha256": "a1b7e514e1acc7f15622b4c23f717b7f840d7455b65b9c1fdb9ed4570b39709f",
+      "output_sha256": "a1b7e514e1acc7f15622b4c23f717b7f840d7455b65b9c1fdb9ed4570b39709f",
+      "modified": false,
+      "lines": 370
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Debug/init.lua",
+      "source_sha256": "bc32d480f62df55d1dc14b954f8a9e0c0ef5c26b19deaecc54265669f56b6fcf",
+      "output_sha256": "bc32d480f62df55d1dc14b954f8a9e0c0ef5c26b19deaecc54265669f56b6fcf",
+      "modified": false,
+      "lines": 4
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Debug/DungeonDebug.lua",
+      "source_sha256": "ab4d78135d866a76f493234a12500c0421888b3a8a6a6391390ad5fc352295c0",
+      "output_sha256": "ab4d78135d866a76f493234a12500c0421888b3a8a6a6391390ad5fc352295c0",
+      "modified": false,
+      "lines": 51
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Debug/DungeonSpecDebug.lua",
+      "source_sha256": "e39456cf6e0135255e7a23e94713be8ae8f8045078f1624f5399e0192846057a",
+      "output_sha256": "e39456cf6e0135255e7a23e94713be8ae8f8045078f1624f5399e0192846057a",
+      "modified": false,
+      "lines": 166
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/init.server.lua",
+      "source_sha256": "9a6064e57c487d343c7050d8fb852d83e8ba0636b5ed7a06974cd307c0864f15",
+      "output_sha256": "616f1d6575e6ef4bbb8fe81950ec114c45ca4224f260c410cddd07a8f6e2160e",
+      "modified": true,
+      "lines": 43,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [],
+      "live_source_sha256": "9a6064e57c487d343c7050d8fb852d83e8ba0636b5ed7a06974cd307c0864f15"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/FeatureEmitter.lua",
+      "source_sha256": "36dc6b07f5f3e7a065d98a36157a772b0c08909beeeeb03ea25acc8e73ecdcf4",
+      "output_sha256": "24120850b6c62eb77227365b64ddb528589cc2c88187924f63e2be3044597adb",
+      "modified": true,
+      "lines": 71,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "buildPart",
+        "releaseModel",
+        "BuildJobMetatable:_fail",
+        "BuildJobMetatable:Cancel"
+      ],
+      "live_source_sha256": "36dc6b07f5f3e7a065d98a36157a772b0c08909beeeeb03ea25acc8e73ecdcf4"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/FeaturePlanner.lua",
+      "source_sha256": "d61d3b4dc3a68756236d99336dc525f616cf5476efe334c4eff6003b61653fff",
+      "output_sha256": "1bfdd8bba82117fcf5bfe7527f33f93598035f7d3357c21c02ad8fc549cd1278",
+      "modified": true,
+      "lines": 32,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "finiteNumber",
+        "intersects",
+        "regionBounds"
+      ],
+      "live_source_sha256": "d61d3b4dc3a68756236d99336dc525f616cf5476efe334c4eff6003b61653fff"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/FeatureDecoration.lua",
+      "source_sha256": "7a65dc7e47f569a6d38d555945070c0f772af7c8d112ba63d66f081b872f8426",
+      "output_sha256": "10450d9d324fe8e65ff4ecb8545a7fb35907a8ee3ba1bb553d46c65d5ec410ff",
+      "modified": true,
+      "lines": 14,
+      "kind": "architecture_only",
+      "restored_functions": [],
+      "live_source_sha256": "7a65dc7e47f569a6d38d555945070c0f772af7c8d112ba63d66f081b872f8426"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureServiceTests.lua",
+      "source_sha256": "e0b63345c194b900867c185d551d407335f1e79a3dd363aed92a66266b4cdf47",
+      "output_sha256": "e2fdfa455f7d33cc1ec339bf55f12f63e7b3f9ffc75745a6e58f740af1ee8a46",
+      "modified": true,
+      "lines": 9,
+      "kind": "architecture_only"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureSpatialIndexTests.lua",
+      "source_sha256": "bf5f643e069457f3024ef856f3aa902dcc3da85768306e0816d5e6f177ca50e8",
+      "output_sha256": "7631382379affb9b19b81cec12cbec94002f4af5ae77f1b5aaf8aed25293648d",
+      "modified": true,
+      "lines": 9,
+      "kind": "architecture_only"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeaturePlanningTests.lua",
+      "source_sha256": "e812dbd3635ad8a675d8ff2370adbbd933a27e775a17e67321026ff855a7d924",
+      "output_sha256": "68379e498e07935fdb98631d9a2cac583543afdde38a09aa3a1ee2630d0213fd",
+      "modified": true,
+      "lines": 9,
+      "kind": "architecture_only"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureFixtures.lua",
+      "source_sha256": "9856b46fe42bd6ad3fe1decb687bc166969ea9421c52a5776ad08060745c4cfe",
+      "output_sha256": "3207c89e51b3b25276d3b32e8425994b213b9f3161efdf1a7b8c7b4f444b1505",
+      "modified": true,
+      "lines": 9,
+      "kind": "architecture_only"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureGeometryTests.lua",
+      "source_sha256": "b7c0159f5019f5bc363f379926d68edad932509b2c99055a103117f6d038cca0",
+      "output_sha256": "a21e9415d991ab9692ccc750a6b0c2cf6506380b060a9b3b745ed60c27a42130",
+      "modified": true,
+      "lines": 9,
+      "kind": "architecture_only"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureLifecycleTests.lua",
+      "source_sha256": "1459a809a23de03ace9951b8877a0f80c2394c7a1468fb38f8a882d126a4bde9",
+      "output_sha256": "89e45c6521cdc10e955f92a1ed82823d306d911ae6602f7ac2af5aee23575b52",
+      "modified": true,
+      "lines": 9,
+      "kind": "architecture_only"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureIntegrationTests.lua",
+      "source_sha256": "87eba1e61400bc9eb6e1771c84bd5ffa9c70b3b1e3a561b5b93e0d4c71404904",
+      "output_sha256": "10dcad558f1662574b0f05123db7244a97565f1ed774a354b6323b49e3ac1e98",
+      "modified": true,
+      "lines": 9,
+      "kind": "architecture_only"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/FeatureTerrainAdapter.lua",
+      "source_sha256": "f461ab27750059eb37781aecfcd5aad86a208c5eca5229edce3ab5267838f5f7",
+      "output_sha256": "4f44bfa22f3821216a0d7f4bdd15516937608405ab6c8d33481032fb9b995b04",
+      "modified": true,
+      "lines": 41,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "intersects",
+        "smoothstep"
+      ],
+      "live_source_sha256": "f461ab27750059eb37781aecfcd5aad86a208c5eca5229edce3ab5267838f5f7"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/FeatureTypes.lua",
+      "source_sha256": "7327808f7e409eba937f3af1008f1361c3f8ba554040d39fb95feaa64d0bf847",
+      "output_sha256": "7327808f7e409eba937f3af1008f1361c3f8ba554040d39fb95feaa64d0bf847",
+      "modified": false,
+      "lines": 53
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Recipes/PillarCluster.lua",
+      "source_sha256": "1df1b7540e28b993ce8d263bc02602d738a020f95816cad70f48a153f37cdbaa",
+      "output_sha256": "f85c2fb1c6ff7ae684e25c90f09324ef80f00d8b17365b9dbd857434846a9618",
+      "modified": true,
+      "lines": 27,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "finiteNumber",
+        "includeBounds"
+      ],
+      "live_source_sha256": "1df1b7540e28b993ce8d263bc02602d738a020f95816cad70f48a153f37cdbaa"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Recipes/Ravine.lua",
+      "source_sha256": "727a73a6dd636b9f8f05e7b1deed19762d3aae6595f21b00bd089ca02d12f7cd",
+      "output_sha256": "7b9e34b2adc042c81aaa4d455b634a96dd352b1d817f2e9f827f0fa3fbfbb5a9",
+      "modified": true,
+      "lines": 27,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "finiteNumber",
+        "includeBounds"
+      ],
+      "live_source_sha256": "727a73a6dd636b9f8f05e7b1deed19762d3aae6595f21b00bd089ca02d12f7cd"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/FeatureGeometry.lua",
+      "source_sha256": "e05394186dc8cc1ccdd21320f719357937eb2a61916ccb106caab14a329da2ba",
+      "output_sha256": "e05394186dc8cc1ccdd21320f719357937eb2a61916ccb106caab14a329da2ba",
+      "modified": false,
+      "lines": 347
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/FeatureSpatialIndex.lua",
+      "source_sha256": "bf8f75e3d61d2e75d67e06ceaa5b308ce645dfa1612d3c81540c437ba9ef4199",
+      "output_sha256": "bf8f75e3d61d2e75d67e06ceaa5b308ce645dfa1612d3c81540c437ba9ef4199",
+      "modified": false,
+      "lines": 110
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Tests/SchedulerQueueTests.lua",
+      "source_sha256": "63df1f6aecc8fe46059cd0cb993fc1bf796ac85787da8b38ff8c8f9b5f200cf6",
+      "output_sha256": "84633f765e0645b98eb07774e8442e74077f5cde422cb06215f53c342b291351",
+      "modified": true,
+      "lines": 9,
+      "kind": "architecture_only"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Tests/PersistentStructureResolverTests.lua",
+      "source_sha256": "db76b639f1105f24a4f414e4955a5bb39080872f8ed5d711385d7ab308928800",
+      "output_sha256": "021800f0de4827e9d91f20f4bf4a27da406b850eccd0fbf68877546739154456",
+      "modified": true,
+      "lines": 9,
+      "kind": "architecture_only"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/SimpleStreamHorizon.lua",
+      "source_sha256": "5b2f262fa5890fb72d9ec20cadd28d4ba48a112893899f35e0bfc843c0054e0c",
+      "output_sha256": "a8a4744f5205d58f9c5f60a161056daae4b6ce3387f164a531790ef0ae86ade8",
+      "modified": true,
+      "lines": 34,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [],
+      "live_source_sha256": "5b2f262fa5890fb72d9ec20cadd28d4ba48a112893899f35e0bfc843c0054e0c"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Sites.lua",
+      "source_sha256": "e32eabecfd390552c1759eb5ad8f77e5471bcd18e264b8a95aaeea059caea772",
+      "output_sha256": "eee822a951ab804275ff6231710000bf6ff49b22285324788fb0f65e939812ed",
+      "modified": true,
+      "lines": 76,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "Sites.GetSitesNearChunk",
+        "Sites.GetPlacementCFrame",
+        "key",
+        "padRadius"
+      ],
+      "live_source_sha256": "e32eabecfd390552c1759eb5ad8f77e5471bcd18e264b8a95aaeea059caea772"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/MicroTerrain.lua",
+      "source_sha256": "18a3605cff3efca724c32fdf82dc5d18bb0b9d4a5c78e2d83980934e9854aa73",
+      "output_sha256": "87814ca3c891f015281d3893bcdfcd9b19dde892716de3cb7065fa12ca5321fe",
+      "modified": true,
+      "lines": 30,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [],
+      "live_source_sha256": "18a3605cff3efca724c32fdf82dc5d18bb0b9d4a5c78e2d83980934e9854aa73"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/TerrainFeatures.lua",
+      "source_sha256": "0b3b99a4cbbe0a4a03b7a5baa70da1caa091ad8fb2d00f9fb595fd53af3e32a6",
+      "output_sha256": "cf6bffb0d1d9497dcf3db333569813750b5dbfc42001263e8cc4264ba9349820",
+      "modified": true,
+      "lines": 509
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/RiverCarver.lua",
+      "source_sha256": "da1482f34a10b54b119b1859b25b8946489046445a2be64353f1ef1109b4a2c7",
+      "output_sha256": "6538fe9696c11d8112a5d233a525a40ce904d4f6988923d2c38bb83948aa0e31",
+      "modified": true,
+      "lines": 94
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/HeightSampler.lua",
+      "source_sha256": "2f0f958ba942d394919f2f2f2de453ed2a8f83c78ee382c0ffaa18b7edcaf833",
+      "output_sha256": "8c9fc1153f742f4b349b2cc931c17acf4be32c2446d524437b7cdbd519912895",
+      "modified": true,
+      "lines": 34,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [],
+      "live_source_sha256": "2f0f958ba942d394919f2f2f2de453ed2a8f83c78ee382c0ffaa18b7edcaf833"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/SurfaceYManager.lua",
+      "source_sha256": "4aa5cc74d121f05d859032f4f46ff92e9601f0a021fb7114347d417f7573bea3",
+      "output_sha256": "ca8ac24bb2f9677cd626e1bbe0df12030c7045e8e53ceb5ab53c9bb41afc9cca",
+      "modified": false,
+      "lines": 28
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/PersistentStructureResolver.lua",
+      "source_sha256": "52e77e6588a91ff5bd3cb71d715b3a5525953dd5b277f4c96ab75ebf5e354914",
+      "output_sha256": "52e77e6588a91ff5bd3cb71d715b3a5525953dd5b277f4c96ab75ebf5e354914",
+      "modified": false,
+      "lines": 352
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Spline.lua",
+      "source_sha256": "d1bc50e857560e7bdcfccc22d354ae2f0b973baf48179c9a45d02e781a2d14c2",
+      "output_sha256": "a58e174fa30f92c31bbf7abca4132832eb628e9c273b0522d78ddb998fdb6edc",
+      "modified": false,
+      "lines": 84
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/IslandLayout.lua",
+      "source_sha256": "0025c902ddc2bbec52cfcb492dea2f1ad79e928f39178cc25f770b934ed44eaa",
+      "output_sha256": "68eeabd8deb45e2f74ccc0e085e09bd1e137bde366b5ac7fc0bb267bcf2b4c34",
+      "modified": true,
+      "lines": 269
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Props/init.lua",
+      "source_sha256": "974a0914164316314b582c526673781d4ebc71f668d97bce6332d780bcf325bc",
+      "output_sha256": "a72c9df23fdb94d802d203304d6baf9779463dd72a48db2e809f7ab2fcaa6521",
+      "modified": true,
+      "lines": 47,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "scaleModel"
+      ],
+      "live_source_sha256": "974a0914164316314b582c526673781d4ebc71f668d97bce6332d780bcf325bc"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/WorldGenAudit.lua",
+      "source_sha256": "74b1d140459f4d7951a1e07badf4acf5b9023c0c701bc0ba54cdbc413d0b6497",
+      "output_sha256": "e00c8c87afbf25d5a785c3a670cc78358b366ea663e0d552c247f55a15352d58",
+      "modified": true,
+      "lines": 86,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "percentile",
+        "summarize"
+      ],
+      "live_source_sha256": "74b1d140459f4d7951a1e07badf4acf5b9023c0c701bc0ba54cdbc413d0b6497"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/PersistentStructureReservations.lua",
+      "source_sha256": "f216c9c6aa7127dfc3d7f2d4b2e17352056cee950672633c6a52c3d6ab16bef5",
+      "output_sha256": "f216c9c6aa7127dfc3d7f2d4b2e17352056cee950672633c6a52c3d6ab16bef5",
+      "modified": false,
+      "lines": 102
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/WorldAuthoringAdapter.lua",
+      "source_sha256": "f4350168c8b944d3ef0051908212f63416a7aa4d63f85ac52a461b71a1f44970",
+      "output_sha256": "7908842b873acddf0f82d2b1adbfd4316d8596a8a1ab2eff9d65457ab9da01c1",
+      "modified": true,
+      "lines": 73,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [],
+      "live_source_sha256": "f4350168c8b944d3ef0051908212f63416a7aa4d63f85ac52a461b71a1f44970"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/RNGContext.lua",
+      "source_sha256": "6ec9624eb559522fe1321d8ba0a1c00be4dcf1333d21e82942d6537b1a35497e",
+      "output_sha256": "6ec9624eb559522fe1321d8ba0a1c00be4dcf1333d21e82942d6537b1a35497e",
+      "modified": false,
+      "lines": 106
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/State.lua",
+      "source_sha256": "a58553cd45e9b16d3304c546cf92179cd9a04817c10b3c01b4b05d1640c90fd0",
+      "output_sha256": "75601b2888c4e7d6c583b4fb0468f4984bc0724a651083f438270cfb615003af",
+      "modified": true,
+      "lines": 41
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/CaveSystem.lua",
+      "source_sha256": "e4191f8bea9572bd217142966e6367e5a804523ef6b3ffe9eafade44b144c5dc",
+      "output_sha256": "ae847b9410a2d8e3ceca2f25326ece6314b285d90e1b26e9026d89c7b82a1dca",
+      "modified": true,
+      "lines": 345
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/PillarMountains.lua",
+      "source_sha256": "d0d929092103be0927cfa4d4d9487f78987b4a33fb8952e931258b36854773ee",
+      "output_sha256": "bb1c36dd377f83178c0caf60e6c684b3a2f33811e35a63e90cb75d94040e3e8b",
+      "modified": true,
+      "lines": 113
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/FloatingPropsParallel.lua",
+      "source_sha256": "08c50d9ffcfc88804105d74e94bb4dfc5284646e42f08239d44dec06fb40e251",
+      "output_sha256": "c59b0ff389b87bf8ae5f190bc2cf6988e50871700ddc86b094291d2107c824f5",
+      "modified": true,
+      "lines": 38,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [],
+      "live_source_sha256": "08c50d9ffcfc88804105d74e94bb4dfc5284646e42f08239d44dec06fb40e251"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/BiomeResolver.lua",
+      "source_sha256": "a36b75095e03515416b5fec62312e2e57a9361f918371cd4eaded369380c759a",
+      "output_sha256": "92c7167997909242308df07d0cb90732583afd238d38185ea9413c2069dbab38",
+      "modified": true,
+      "lines": 121,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [],
+      "live_source_sha256": "a36b75095e03515416b5fec62312e2e57a9361f918371cd4eaded369380c759a"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/WorldGenerationScheduler.lua",
+      "source_sha256": "522da27f1535e7bbc79377f014a667ff6d61bcf73101677389e3a03271c54d66",
+      "output_sha256": "15e46d901f222a3a34b027ca044ea67d97bc8fa5c0cfec4535750dd2c39e3351",
+      "modified": true,
+      "lines": 77,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "WorldGenerationScheduler:Stop",
+        "WorldGenerationScheduler:IsActive",
+        "WorldGenerationScheduler:GetStatus",
+        "queueRemaining"
+      ],
+      "live_source_sha256": "522da27f1535e7bbc79377f014a667ff6d61bcf73101677389e3a03271c54d66"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Gen.lua",
+      "source_sha256": "ceb045c79ab54df148e1eea66aedd291fd99f420fd7f80142039374519f368bd",
+      "output_sha256": "50293cafa3429194a53e118f3914723670ec40142993a639bab0d8f074b04206",
+      "modified": true,
+      "lines": 163,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "TerrainModule.IsPointInVolume",
+        "TerrainModule.IsPartInBoundary",
+        "TerrainModule.ClearTerrainAccessories",
+        "TerrainModule.SolidifyTerrain"
+      ],
+      "live_source_sha256": "ceb045c79ab54df148e1eea66aedd291fd99f420fd7f80142039374519f368bd"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/PropsParallel/init.lua",
+      "source_sha256": "5b55dc90f740ac9fbcf33de0fd8d31f0d6f4b6f58469bc96fced7c8b8bbc3b70",
+      "output_sha256": "d20e39f9ade2121a5b2ec865f9749d3a6e5174e2c947bcd72e1721a8b9d20f63",
+      "modified": true,
+      "lines": 73,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "scaleModel",
+        "isMicroTerrainPart"
+      ],
+      "live_source_sha256": "5b55dc90f740ac9fbcf33de0fd8d31f0d6f4b6f58469bc96fced7c8b8bbc3b70"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Maps.lua",
+      "source_sha256": "53c067db2811cba2b6af27952227b812d36ef8153be9276eba4a13d1932ff776",
+      "output_sha256": "bcb532592ebfc8d7b5a54c880aadf4368d391de86d88e71de97fc49ea348eae0",
+      "modified": true,
+      "lines": 60,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [
+        "lerp",
+        "clamp",
+        "isign"
+      ],
+      "live_source_sha256": "53c067db2811cba2b6af27952227b812d36ef8153be9276eba4a13d1932ff776"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/TerrainCullingManager.server.lua",
+      "source_sha256": "0885e4be3f54881eb7d900b54f7bc96cde072418589275b272da60f05a31fffa",
+      "output_sha256": "2dade2630775e8330bc1c55f88189b8c2393722390aaa9cb6022664fe3a42c06",
+      "modified": true,
+      "lines": 20,
+      "kind": "mixed_source_explanation",
+      "restored_functions": [],
+      "live_source_sha256": "0885e4be3f54881eb7d900b54f7bc96cde072418589275b272da60f05a31fffa"
+    }
+  ],
+  "omitted_content_files": [
+    "src/ServerScriptService/Dungeon/Data/init.lua",
+    "src/ServerScriptService/Dungeon/Data/WFCThemeRegistryData.lua",
+    "src/ServerScriptService/Dungeon/Data/DungeonArchetypeDecorData.lua",
+    "src/ServerScriptService/Dungeon/Data/DungeonDecorAssetRegistryData.lua",
+    "src/ServerScriptService/Dungeon/Data/DungeonVegetationAssetRegistryData.lua",
+    "src/ServerScriptService/Dungeon/Data/DungeonStructureRuleData.lua",
+    "src/ServerScriptService/Dungeon/Data/DungeonData.lua",
+    "src/ServerScriptService/Dungeon/Data/DungeonVisualThemeData.lua",
+    "src/ServerScriptService/Dungeon/Data/DungeonVegetationRuleData.lua",
+    "src/ServerScriptService/Dungeon/Data/DungeonWritingVariantData.lua",
+    "src/ServerScriptService/WorldGeneration/Features/FeatureConfig.lua",
+    "src/ServerScriptService/WorldGeneration/Modules/WorldGenConfig.lua",
+    "src/ServerScriptService/WorldGeneration/Modules/BiomeConfig.lua",
+    "src/ServerScriptService/WorldGeneration/Modules/RealmConfigs/DarkDimension/WorldGenConfig.lua",
+    "src/ServerScriptService/WorldGeneration/Modules/RealmConfigs/DarkDimension/BiomeConfig.lua",
+    "src/ServerScriptService/WorldGeneration/Modules/RealmConfigs/DarkDimension/IslandData.lua"
+  ],
+  "removed_files": [
+    {
+      "path": "src/ServerScriptService/Dungeon/WFC/init.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/WFC/WFCRoomDecorator.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/WFC/WFCConstraintBuilder.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/WFC/WFCTypes.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/WFC/WFCResolver.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/WFC/WFCDebug.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/WFC/WFCTileVocabulary.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/WFC/WFCCore.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/WFC/WFCRoomProfileBuilder.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/WFC/WFCBlueprintExporter.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/WFC/WFCThemeDB.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Vegetation/init.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Vegetation/VegetationPlacementModule.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Vegetation/SegmentedPlantPoseModule.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Vegetation/VegetationProfileModule.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Vegetation/VegetationAssetRegistry.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Vegetation/VegetationCleanupModule.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Vegetation/GrassSpreadModule.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Vegetation/DungeonVegetationModule.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Vegetation/CrackGrowthModule.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Vegetation/SurfaceGrowthModule.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Progression/init.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Progression/ProgressionPlanner.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    },
+    {
+      "path": "src/ServerScriptService/Dungeon/Progression/ProgressionTypes.lua",
+      "reason": "Owner requested inactive WFC/Vegetation or dungeon progression removal"
+    }
+  ],
+  "partial_reveal_note": "Marked local source excerpts plus explanations; owner review pending. Private; earlier implementations remain in history.",
+  "method_balance": {
+    "scope": "21 revised WorldGeneration production files",
+    "real_declared_functions": 66,
+    "omitted_declared_functions": 68,
+    "total_declared_functions": 134,
+    "real_percent": 49.3,
+    "count_rule": "Named local/nested function declarations currently shown; excludes anonymous callbacks and original hidden helpers. Executable body is not runtime validation."
+  }
+}

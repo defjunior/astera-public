@@ -1,0 +1,15 @@
+# Astera systems source
+
+Private mixed source and architecture showcase. The exact world-generation optimization pipeline is intentionally withheld. This is no longer a full algorithm dump or a runnable game.
+
+- Dungeon: layout, room/spec and build-management source. The owner removed the inactive WFC and Vegetation folders and dungeon Progression planning. Decor stays, as requested; some retained callers/Decor modules still reference removed utilities.
+- World generation: marked real excerpts plus explanation/interface boundaries for startup, scheduling/streaming, terrain generation, sampling/caches, parallel placement, feature planning/emission, authoring previews and related verification recipes. Sites now includes read-side lookup/deduplication and placement transforms; other restored excerpts cover containment/cleanup, scheduler status, math, part materialization/cancellation and statistics. 66 of 134 declared functions across the 21 revised world-gen production files have real bodies (49.3%). Anonymous callbacks and original hidden helpers are not counted. Core orchestration/tuning/cache specifics remain omitted. Other selected geometry and structure modules remain real source. See [architecture](ARCHITECTURE.md).
+- Local movement: `src/ReplicatedFirst/Client/Controllers/CharacterController.lua` handles client input and character lifecycle; `src/ReplicatedStorage/Modules/Utility/AsteraMovementController.lua` handles time-aware momentum and constraint lifecycle. Status/combat-forced enemy movement is stubbed. Framework/client state/remotes remain external.
+- Entity-time, packet serialization and transition source from the earlier pass remain. PersistenceService is removed at the owner's request. Transition references to persistence are unresolved integration boundaries, not a bundled implementation.
+- Player component mount/unmount/binding infrastructure and movement wiring remain partial. Gameplay-heavy player components are still held pending the owner's sensitivity decision.
+
+## Status
+
+The owner identifies WFC and Vegetation as inactive/nonworking decoration systems. World generation remains work in progress. No Roblox execution, gameplay, performance or security validation is claimed here. Marked real excerpts are copied source, while named empty methods describe integration surfaces, not drop-in implementations. This is a mix of code and explanation, not a literal promise that half the original lines are disclosed. The owner will review this balance before any history cleanup/public release. Original game repositories were not edited.
+
+See [extraction boundaries](EXTRACTION.md), [content shapes](CONTENT-SCHEMAS.md), `source-manifest.json`, `additional-source-manifest.json`, `component-source-manifest.json` and `boundary-revision-manifest.json` for scope and provenance. Earlier full implementations remain recoverable in commit history. This private tree must not be released until the owner approves a complete history audit and any cleanup plan. Current-tree exclusions do not erase history. No license is granted.

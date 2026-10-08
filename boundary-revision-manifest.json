@@ -1,0 +1,417 @@
+{
+  "verified_date": "2026-10-08",
+  "status": "Private architecture/selected source; history still holds earlier implementations.",
+  "files": [
+    {
+      "path": "src/ServerScriptService/WorldGeneration/init.server.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "World-generation entrypoint. Owns startup and integration boundaries; orchestration implementation is private.",
+      "previous_sha256": "42e36e94b72713f8f83edc6b5700d64348f04df1bd11f7ecfe9f465629b432a9",
+      "output_sha256": "616f1d6575e6ef4bbb8fe81950ec114c45ca4224f260c410cddd07a8f6e2160e",
+      "lines": 43,
+      "restored_functions": [],
+      "live_source_sha256": "9a6064e57c487d343c7050d8fb852d83e8ba0636b5ed7a06974cd307c0864f15",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/TerrainCullingManager.server.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Terrain lifecycle boundary. Controls visibility/lifetime integration; culling policy is private.",
+      "previous_sha256": "cdb2de7b7f4b9fa55982aa34586e4ce07513237da8ba32e07640db7155352f88",
+      "output_sha256": "2dade2630775e8330bc1c55f88189b8c2393722390aaa9cb6022664fe3a42c06",
+      "lines": 20,
+      "restored_functions": [],
+      "live_source_sha256": "0885e4be3f54881eb7d900b54f7bc96cde072418589275b272da60f05a31fffa",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/WorldGenerationScheduler.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Work scheduling interface. Coordinates asynchronous generation work; ordering, budgets and queue policy are private.",
+      "previous_sha256": "522da27f1535e7bbc79377f014a667ff6d61bcf73101677389e3a03271c54d66",
+      "output_sha256": "15e46d901f222a3a34b027ca044ea67d97bc8fa5c0cfec4535750dd2c39e3351",
+      "lines": 77,
+      "restored_functions": [
+        "WorldGenerationScheduler:Stop",
+        "WorldGenerationScheduler:IsActive",
+        "WorldGenerationScheduler:GetStatus",
+        "queueRemaining"
+      ],
+      "live_source_sha256": "522da27f1535e7bbc79377f014a667ff6d61bcf73101677389e3a03271c54d66",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/SimpleStreamHorizon.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "World streaming interface. Reports lifecycle state and connects interest updates; selection, reuse and worker policy are private.",
+      "previous_sha256": "5b2f262fa5890fb72d9ec20cadd28d4ba48a112893899f35e0bfc843c0054e0c",
+      "output_sha256": "a8a4744f5205d58f9c5f60a161056daae4b6ce3387f164a531790ef0ae86ade8",
+      "lines": 34,
+      "restored_functions": [],
+      "live_source_sha256": "5b2f262fa5890fb72d9ec20cadd28d4ba48a112893899f35e0bfc843c0054e0c",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Gen.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Terrain generation interface. Creates and maintains terrain geometry; generation/merge/culling implementation is private.",
+      "previous_sha256": "ceb045c79ab54df148e1eea66aedd291fd99f420fd7f80142039374519f368bd",
+      "output_sha256": "50293cafa3429194a53e118f3914723670ec40142993a639bab0d8f074b04206",
+      "lines": 163,
+      "restored_functions": [
+        "TerrainModule.IsPointInVolume",
+        "TerrainModule.IsPartInBoundary",
+        "TerrainModule.ClearTerrainAccessories",
+        "TerrainModule.SolidifyTerrain"
+      ],
+      "live_source_sha256": "ceb045c79ab54df148e1eea66aedd291fd99f420fd7f80142039374519f368bd",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/HeightSampler.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Elevation query interface. Returns terrain-height information; sampling composition and caching are private.",
+      "previous_sha256": "2f0f958ba942d394919f2f2f2de453ed2a8f83c78ee382c0ffaa18b7edcaf833",
+      "output_sha256": "8c9fc1153f742f4b349b2cc931c17acf4be32c2446d524437b7cdbd519912895",
+      "lines": 34,
+      "restored_functions": [],
+      "live_source_sha256": "2f0f958ba942d394919f2f2f2de453ed2a8f83c78ee382c0ffaa18b7edcaf833",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Maps.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Map-sampling interface. Provides named sampler families; exact sampling implementations are private.",
+      "previous_sha256": "53c067db2811cba2b6af27952227b812d36ef8153be9276eba4a13d1932ff776",
+      "output_sha256": "bcb532592ebfc8d7b5a54c880aadf4368d391de86d88e71de97fc49ea348eae0",
+      "lines": 60,
+      "restored_functions": [
+        "lerp",
+        "clamp",
+        "isign"
+      ],
+      "live_source_sha256": "53c067db2811cba2b6af27952227b812d36ef8153be9276eba4a13d1932ff776",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/BiomeResolver.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Biome query interface. Provides environmental labels and settings; query/blending/cache policy is private.",
+      "previous_sha256": "a36b75095e03515416b5fec62312e2e57a9361f918371cd4eaded369380c759a",
+      "output_sha256": "92c7167997909242308df07d0cb90732583afd238d38185ea9413c2069dbab38",
+      "lines": 121,
+      "restored_functions": [],
+      "live_source_sha256": "a36b75095e03515416b5fec62312e2e57a9361f918371cd4eaded369380c759a",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Sites.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Structure placement interface. Links placement requests to terrain; selection, reconciliation and caches are private.",
+      "previous_sha256": "e32eabecfd390552c1759eb5ad8f77e5471bcd18e264b8a95aaeea059caea772",
+      "output_sha256": "eee822a951ab804275ff6231710000bf6ff49b22285324788fb0f65e939812ed",
+      "lines": 76,
+      "restored_functions": [
+        "Sites.GetSitesNearChunk",
+        "Sites.GetPlacementCFrame",
+        "key",
+        "padRadius"
+      ],
+      "live_source_sha256": "e32eabecfd390552c1759eb5ad8f77e5471bcd18e264b8a95aaeea059caea772",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/MicroTerrain.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Local terrain-detail interface. Accepts a chunk context; detail emission and resource policy are private.",
+      "previous_sha256": "18a3605cff3efca724c32fdf82dc5d18bb0b9d4a5c78e2d83980934e9854aa73",
+      "output_sha256": "87814ca3c891f015281d3893bcdfcd9b19dde892716de3cb7065fa12ca5321fe",
+      "lines": 30,
+      "restored_functions": [],
+      "live_source_sha256": "18a3605cff3efca724c32fdf82dc5d18bb0b9d4a5c78e2d83980934e9854aa73",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/PropsParallel/init.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Prop placement interface. Connects placement requests to world geometry; worker and placement implementation is private.",
+      "previous_sha256": "5b55dc90f740ac9fbcf33de0fd8d31f0d6f4b6f58469bc96fced7c8b8bbc3b70",
+      "output_sha256": "d20e39f9ade2121a5b2ec865f9749d3a6e5174e2c947bcd72e1721a8b9d20f63",
+      "lines": 73,
+      "restored_functions": [
+        "scaleModel",
+        "isMicroTerrainPart"
+      ],
+      "live_source_sha256": "5b55dc90f740ac9fbcf33de0fd8d31f0d6f4b6f58469bc96fced7c8b8bbc3b70",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Props/init.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Prop placement interface. Accepts placement requests; implementation is withheld with its parallel counterpart.",
+      "previous_sha256": "974a0914164316314b582c526673781d4ebc71f668d97bce6332d780bcf325bc",
+      "output_sha256": "a72c9df23fdb94d802d203304d6baf9779463dd72a48db2e809f7ab2fcaa6521",
+      "lines": 47,
+      "restored_functions": [
+        "scaleModel"
+      ],
+      "live_source_sha256": "974a0914164316314b582c526673781d4ebc71f668d97bce6332d780bcf325bc",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/FloatingPropsParallel.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Floating decoration interface. Accepts placement requests; parallel placement implementation is private.",
+      "previous_sha256": "08c50d9ffcfc88804105d74e94bb4dfc5284646e42f08239d44dec06fb40e251",
+      "output_sha256": "c59b0ff389b87bf8ae5f190bc2cf6988e50871700ddc86b094291d2107c824f5",
+      "lines": 38,
+      "restored_functions": [],
+      "live_source_sha256": "08c50d9ffcfc88804105d74e94bb4dfc5284646e42f08239d44dec06fb40e251",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/WorldAuthoringAdapter.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Authoring-preview interface. Connects tooling to world queries; exact pipeline reconstruction paths are private.",
+      "previous_sha256": "c4944d75b74524c1f41c03dee23a16cc309d5715aed57c3303906f91fa5d353d",
+      "output_sha256": "7908842b873acddf0f82d2b1adbfd4316d8596a8a1ab2eff9d65457ab9da01c1",
+      "lines": 73,
+      "restored_functions": [],
+      "live_source_sha256": "f4350168c8b944d3ef0051908212f63416a7aa4d63f85ac52a461b71a1f44970",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/WorldGenAudit.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Audit interface. Exposes diagnostic entry points; implementation that exercises the private pipeline is withheld.",
+      "previous_sha256": "74b1d140459f4d7951a1e07badf4acf5b9023c0c701bc0ba54cdbc413d0b6497",
+      "output_sha256": "e00c8c87afbf25d5a785c3a670cc78358b366ea663e0d552c247f55a15352d58",
+      "lines": 86,
+      "restored_functions": [
+        "percentile",
+        "summarize"
+      ],
+      "live_source_sha256": "74b1d140459f4d7951a1e07badf4acf5b9023c0c701bc0ba54cdbc413d0b6497",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/FeaturePlanner.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Feature planning interface. Accepts regional requests; candidate policy and cached planning are private.",
+      "previous_sha256": "d61d3b4dc3a68756236d99336dc525f616cf5476efe334c4eff6003b61653fff",
+      "output_sha256": "1bfdd8bba82117fcf5bfe7527f33f93598035f7d3357c21c02ad8fc549cd1278",
+      "lines": 32,
+      "restored_functions": [
+        "finiteNumber",
+        "intersects",
+        "regionBounds"
+      ],
+      "live_source_sha256": "d61d3b4dc3a68756236d99336dc525f616cf5476efe334c4eff6003b61653fff",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/FeatureEmitter.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Feature emission interface. Creates cancellable build jobs; staged emission and resource policy are private.",
+      "previous_sha256": "36dc6b07f5f3e7a065d98a36157a772b0c08909beeeeb03ea25acc8e73ecdcf4",
+      "output_sha256": "24120850b6c62eb77227365b64ddb528589cc2c88187924f63e2be3044597adb",
+      "lines": 71,
+      "restored_functions": [
+        "buildPart",
+        "releaseModel",
+        "BuildJobMetatable:_fail",
+        "BuildJobMetatable:Cancel"
+      ],
+      "live_source_sha256": "36dc6b07f5f3e7a065d98a36157a772b0c08909beeeeb03ea25acc8e73ecdcf4",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/FeatureTerrainAdapter.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Feature/terrain integration interface. Links terrain context to feature requests; clipping/planning policy is private.",
+      "previous_sha256": "f461ab27750059eb37781aecfcd5aad86a208c5eca5229edce3ab5267838f5f7",
+      "output_sha256": "4f44bfa22f3821216a0d7f4bdd15516937608405ab6c8d33481032fb9b995b04",
+      "lines": 41,
+      "restored_functions": [
+        "intersects",
+        "smoothstep"
+      ],
+      "live_source_sha256": "f461ab27750059eb37781aecfcd5aad86a208c5eca5229edce3ab5267838f5f7",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/FeatureDecoration.lua",
+      "kind": "architecture_only",
+      "reason": "Feature detail interface. Accepts a plan/context; detail budgets and placement policy are private.",
+      "previous_sha256": "7a65dc7e47f569a6d38d555945070c0f772af7c8d112ba63d66f081b872f8426",
+      "output_sha256": "10450d9d324fe8e65ff4ecb8545a7fb35907a8ee3ba1bb553d46c65d5ec410ff",
+      "lines": 14,
+      "restored_functions": [],
+      "live_source_sha256": "7a65dc7e47f569a6d38d555945070c0f772af7c8d112ba63d66f081b872f8426",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Recipes/PillarCluster.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Feature recipe interface. Accepts a definition/context; optimized recipe construction is private.",
+      "previous_sha256": "1df1b7540e28b993ce8d263bc02602d738a020f95816cad70f48a153f37cdbaa",
+      "output_sha256": "f85c2fb1c6ff7ae684e25c90f09324ef80f00d8b17365b9dbd857434846a9618",
+      "lines": 27,
+      "restored_functions": [
+        "finiteNumber",
+        "includeBounds"
+      ],
+      "live_source_sha256": "1df1b7540e28b993ce8d263bc02602d738a020f95816cad70f48a153f37cdbaa",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Recipes/Ravine.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Feature recipe interface. Accepts a definition/context; optimized recipe construction is private.",
+      "previous_sha256": "727a73a6dd636b9f8f05e7b1deed19762d3aae6595f21b00bd089ca02d12f7cd",
+      "output_sha256": "7b9e34b2adc042c81aaa4d455b634a96dd352b1d817f2e9f827f0fa3fbfbb5a9",
+      "lines": 27,
+      "restored_functions": [
+        "finiteNumber",
+        "includeBounds"
+      ],
+      "live_source_sha256": "727a73a6dd636b9f8f05e7b1deed19762d3aae6595f21b00bd089ca02d12f7cd",
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureFixtures.lua",
+      "kind": "architecture_only",
+      "reason": "Verification recipe/fixture exclusion",
+      "previous_sha256": "9856b46fe42bd6ad3fe1decb687bc166969ea9421c52a5776ad08060745c4cfe",
+      "output_sha256": "3207c89e51b3b25276d3b32e8425994b213b9f3161efdf1a7b8c7b4f444b1505",
+      "lines": 9,
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureServiceTests.lua",
+      "kind": "architecture_only",
+      "reason": "Verification recipe/fixture exclusion",
+      "previous_sha256": "e0b63345c194b900867c185d551d407335f1e79a3dd363aed92a66266b4cdf47",
+      "output_sha256": "e2fdfa455f7d33cc1ec339bf55f12f63e7b3f9ffc75745a6e58f740af1ee8a46",
+      "lines": 9,
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureLifecycleTests.lua",
+      "kind": "architecture_only",
+      "reason": "Verification recipe/fixture exclusion",
+      "previous_sha256": "1459a809a23de03ace9951b8877a0f80c2394c7a1468fb38f8a882d126a4bde9",
+      "output_sha256": "89e45c6521cdc10e955f92a1ed82823d306d911ae6602f7ac2af5aee23575b52",
+      "lines": 9,
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureIntegrationTests.lua",
+      "kind": "architecture_only",
+      "reason": "Verification recipe/fixture exclusion",
+      "previous_sha256": "87eba1e61400bc9eb6e1771c84bd5ffa9c70b3b1e3a561b5b93e0d4c71404904",
+      "output_sha256": "10dcad558f1662574b0f05123db7244a97565f1ed774a354b6323b49e3ac1e98",
+      "lines": 9,
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeaturePlanningTests.lua",
+      "kind": "architecture_only",
+      "reason": "Verification recipe/fixture exclusion",
+      "previous_sha256": "e812dbd3635ad8a675d8ff2370adbbd933a27e775a17e67321026ff855a7d924",
+      "output_sha256": "68379e498e07935fdb98631d9a2cac583543afdde38a09aa3a1ee2630d0213fd",
+      "lines": 9,
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureSpatialIndexTests.lua",
+      "kind": "architecture_only",
+      "reason": "Verification recipe/fixture exclusion",
+      "previous_sha256": "bf5f643e069457f3024ef856f3aa902dcc3da85768306e0816d5e6f177ca50e8",
+      "output_sha256": "7631382379affb9b19b81cec12cbec94002f4af5ae77f1b5aaf8aed25293648d",
+      "lines": 9,
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Features/Tests/FeatureGeometryTests.lua",
+      "kind": "architecture_only",
+      "reason": "Verification recipe/fixture exclusion",
+      "previous_sha256": "b7c0159f5019f5bc363f379926d68edad932509b2c99055a103117f6d038cca0",
+      "output_sha256": "a21e9415d991ab9692ccc750a6b0c2cf6506380b060a9b3b745ed60c27a42130",
+      "lines": 9,
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Tests/PersistentStructureResolverTests.lua",
+      "kind": "architecture_only",
+      "reason": "Verification recipe/fixture exclusion",
+      "previous_sha256": "db76b639f1105f24a4f414e4955a5bb39080872f8ed5d711385d7ab308928800",
+      "output_sha256": "021800f0de4827e9d91f20f4bf4a27da406b850eccd0fbf68877546739154456",
+      "lines": 9,
+      "modified": true
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Tests/SchedulerQueueTests.lua",
+      "kind": "architecture_only",
+      "reason": "Verification recipe/fixture exclusion",
+      "previous_sha256": "63df1f6aecc8fe46059cd0cb993fc1bf796ac85787da8b38ff8c8f9b5f200cf6",
+      "output_sha256": "84633f765e0645b98eb07774e8442e74077f5cde422cb06215f53c342b291351",
+      "lines": 9,
+      "modified": true
+    },
+    {
+      "path": "src/ReplicatedFirst/Client/Controllers/CharacterController.lua",
+      "kind": "movement_source",
+      "reason": "Local movement addition",
+      "previous_sha256": "0fd4789ff3c9460f332b2fc4766da5328899c8892de119947de69e4a83698666",
+      "output_sha256": "513c60c1d47acc00ec0359e5f447378c9177af63b675777a19947cdd01f2b847",
+      "lines": 250,
+      "modified": true
+    },
+    {
+      "path": "src/ReplicatedStorage/Modules/Utility/AsteraMovementController.lua",
+      "kind": "movement_source",
+      "reason": "Local movement addition",
+      "previous_sha256": "faf110fba8bd3b4235b965844943153750b546d81f18e4074ff51d95227fa804",
+      "output_sha256": "2b6f363451ffc6df9ea6b64e91ed25b5f072f723082212bff604d94acfba0d29",
+      "lines": 663
+    }
+  ],
+  "removed_files": [
+    "src/ServerScriptService/Dungeon/WFC/init.lua",
+    "src/ServerScriptService/Dungeon/WFC/WFCRoomDecorator.lua",
+    "src/ServerScriptService/Dungeon/WFC/WFCConstraintBuilder.lua",
+    "src/ServerScriptService/Dungeon/WFC/WFCTypes.lua",
+    "src/ServerScriptService/Dungeon/WFC/WFCResolver.lua",
+    "src/ServerScriptService/Dungeon/WFC/WFCDebug.lua",
+    "src/ServerScriptService/Dungeon/WFC/WFCTileVocabulary.lua",
+    "src/ServerScriptService/Dungeon/WFC/WFCCore.lua",
+    "src/ServerScriptService/Dungeon/WFC/WFCRoomProfileBuilder.lua",
+    "src/ServerScriptService/Dungeon/WFC/WFCBlueprintExporter.lua",
+    "src/ServerScriptService/Dungeon/WFC/WFCThemeDB.lua",
+    "src/ServerScriptService/Dungeon/Vegetation/init.lua",
+    "src/ServerScriptService/Dungeon/Vegetation/VegetationPlacementModule.lua",
+    "src/ServerScriptService/Dungeon/Vegetation/SegmentedPlantPoseModule.lua",
+    "src/ServerScriptService/Dungeon/Vegetation/VegetationProfileModule.lua",
+    "src/ServerScriptService/Dungeon/Vegetation/VegetationAssetRegistry.lua",
+    "src/ServerScriptService/Dungeon/Vegetation/VegetationCleanupModule.lua",
+    "src/ServerScriptService/Dungeon/Vegetation/GrassSpreadModule.lua",
+    "src/ServerScriptService/Dungeon/Vegetation/DungeonVegetationModule.lua",
+    "src/ServerScriptService/Dungeon/Vegetation/CrackGrowthModule.lua",
+    "src/ServerScriptService/Dungeon/Vegetation/SurfaceGrowthModule.lua",
+    "src/ServerScriptService/Dungeon/Progression/init.lua",
+    "src/ServerScriptService/Dungeon/Progression/ProgressionPlanner.lua",
+    "src/ServerScriptService/Dungeon/Progression/ProgressionTypes.lua",
+    "src/ServerScriptService/Services/Progression/PersistenceService/init.lua"
+  ],
+  "partial_reveal_note": "Marked local source excerpts plus explanations; owner review pending. Private; earlier implementations remain in history.",
+  "comparison_note": "Live destination hash/readback checked after method-balance and exact omission-comment revision; source selection verified against live Astera; no runtime validation. Private, owner review pending, earlier full code remains in history.",
+  "method_balance": {
+    "scope": "21 revised WorldGeneration production files",
+    "real_declared_functions": 66,
+    "omitted_declared_functions": 68,
+    "total_declared_functions": 134,
+    "real_percent": 49.3,
+    "count_rule": "Named local/nested function declarations currently shown; excludes anonymous callbacks and original hidden helpers. Executable body is not runtime validation."
+  }
+}

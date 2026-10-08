@@ -1,0 +1,100 @@
+{
+  "verified_date": "2026-10-08",
+  "comparison_note": "Live destination hash/readback checked after method-balance and exact omission-comment revision; source selection verified against live Astera; no runtime validation. Private, owner review pending, earlier full code remains in history.",
+  "files": [
+    {
+      "path": "src/ServerScriptService/Services/Core/TickService/init.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "be525455bdaf1c07c2e48981c8d5155001ed5e7ab30b3c1b6f2c6ce29d7d491a",
+      "output_sha256": "ad745f9b3a30e5ed00e2455c38c8e6e85b325ffffd0193507a7fa2a518039ff6",
+      "modified": true,
+      "lines": 415
+    },
+    {
+      "path": "src/ServerScriptService/Services/Combat/TimeControlService/init.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "f638d5be88e7e2deaba0a4339a4405ef5fd3e2738559abf1c6f25a472165a7b8",
+      "output_sha256": "8677b9c4abd081317327c92fa6d080c0cec86eba27d6271590c6e1a31f34c509",
+      "modified": true,
+      "lines": 337
+    },
+    {
+      "path": "src/ServerScriptService/Services/TransitionService/init.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "11d0e4d81b527fa7efc8e92ffe95b34f703c5535427ce08278894c336a9a2fc4",
+      "output_sha256": "ccdc3f3079c6da7eea57c7c4f60a2d5f306e78d55b956a98583b3e6a063d2ad0",
+      "modified": true,
+      "lines": 992
+    },
+    {
+      "path": "src/ServerScriptService/Services/TransitionService/ContractValidator.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "e956307f4ad8fcbb7cd5049b4802616c339a49d1d298801e5a1e09c6b2a3cde7",
+      "output_sha256": "e956307f4ad8fcbb7cd5049b4802616c339a49d1d298801e5a1e09c6b2a3cde7",
+      "modified": false,
+      "lines": 108
+    },
+    {
+      "path": "src/ReplicatedStorage/Modules/Data/RemotePacketCodec.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "947f9e048ca27edd9f26c1a9e97500ffc8a3c37f172df45303990e3a94799cd4",
+      "output_sha256": "947f9e048ca27edd9f26c1a9e97500ffc8a3c37f172df45303990e3a94799cd4",
+      "modified": false,
+      "lines": 311
+    },
+    {
+      "path": "src/ReplicatedStorage/Modules/Data/TeleportContract.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "2288320d5209deccfe5afe4d21f85a34514b1ea0389b3ffaf4b5b97bc2f362e7",
+      "output_sha256": "3993fb33491a514d71efab30ec333d22f9390b17306ae0d997a2854020f3fb24",
+      "modified": true,
+      "lines": 94
+    },
+    {
+      "path": "src/ReplicatedStorage/Modules/Time/EffectTime.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "872146b81abe458cb40587162ae95b7169745b1a2691c18df8d4b34b4bf35584",
+      "output_sha256": "872146b81abe458cb40587162ae95b7169745b1a2691c18df8d4b34b4bf35584",
+      "modified": false,
+      "lines": 62
+    },
+    {
+      "path": "src/ReplicatedStorage/Modules/Time/Timeline.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "61622d997f17a5e6d20d87542aed31cf1db45417e0e9df8837b18f9afc076c3e",
+      "output_sha256": "61622d997f17a5e6d20d87542aed31cf1db45417e0e9df8837b18f9afc076c3e",
+      "modified": false,
+      "lines": 57
+    },
+    {
+      "path": "src/ReplicatedStorage/Modules/Time/Presentation.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "96b515e1e4474a45cc715a74e24cd73644e7d45d36cf29c87755f6b01fb3c109",
+      "output_sha256": "96b515e1e4474a45cc715a74e24cd73644e7d45d36cf29c87755f6b01fb3c109",
+      "modified": false,
+      "lines": 158
+    },
+    {
+      "path": "src/ReplicatedStorage/Modules/Time/EntityTime.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "ac45468c55c8329fe6a966ceac5b3e8b25d10b31c0acc957c913541775e930e1",
+      "output_sha256": "ac45468c55c8329fe6a966ceac5b3e8b25d10b31c0acc957c913541775e930e1",
+      "modified": false,
+      "lines": 94
+    }
+  ],
+  "removed_files": [
+    {
+      "path": "src/ServerScriptService/Services/Progression/PersistenceService/init.lua",
+      "reason": "Owner requested PersistenceService removal"
+    }
+  ],
+  "method_balance": {
+    "scope": "21 revised WorldGeneration production files",
+    "real_declared_functions": 66,
+    "omitted_declared_functions": 68,
+    "total_declared_functions": 134,
+    "real_percent": 49.3,
+    "count_rule": "Named local/nested function declarations currently shown; excludes anonymous callbacks and original hidden helpers. Executable body is not runtime validation."
+  }
+}

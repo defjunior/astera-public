@@ -1,0 +1,65 @@
+{
+  "verified_date": "2026-10-08",
+  "status": "Partial extraction; sensitive mechanic slice pending owner decision.",
+  "comparison_note": "Live destination hash/readback checked after method-balance and exact omission-comment revision; source selection verified against live Astera; no runtime validation. Private, owner review pending, earlier full code remains in history.",
+  "files": [
+    {
+      "path": "src/ServerScriptService/Classes/PlayerLike/Components/Astera/MovementComponent.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "566f8c8a8de974fdfbb83b0c86d99534b1a5385b4896236d7e687ce40c3963b5",
+      "output_sha256": "a602f0463d62e80d6b8b5c6b08ec092649ef26aab10819723c13d3f61b8d3d96",
+      "modified": true,
+      "lines": 121,
+      "source_parse_error": false,
+      "output_parse_error": false
+    },
+    {
+      "path": "src/ServerScriptService/Classes/PlayerLike/Components/Base.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "b423b5b19bf32eba0168a4fd47264b5d3664c6420be30c8ca0e12fa346c19f6e",
+      "output_sha256": "b423b5b19bf32eba0168a4fd47264b5d3664c6420be30c8ca0e12fa346c19f6e",
+      "modified": false,
+      "lines": 38,
+      "source_parse_error": false,
+      "output_parse_error": false
+    },
+    {
+      "path": "src/ServerScriptService/Classes/PlayerLike/Components/Registry.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "5618d71d52daa6f64af60579f1bfe6ad9adf4eef582f4a0581dcd3a6ca773e53",
+      "output_sha256": "5618d71d52daa6f64af60579f1bfe6ad9adf4eef582f4a0581dcd3a6ca773e53",
+      "modified": false,
+      "lines": 29,
+      "source_parse_error": false,
+      "output_parse_error": false
+    },
+    {
+      "path": "src/ServerScriptService/Classes/PlayerLike/Components/init.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "d237f692def4e33cc17324b8f43e40300b5385df901cc49c3aebf1f61d22826c",
+      "output_sha256": "d237f692def4e33cc17324b8f43e40300b5385df901cc49c3aebf1f61d22826c",
+      "modified": false,
+      "lines": 27,
+      "source_parse_error": false,
+      "output_parse_error": false
+    },
+    {
+      "path": "src/ServerScriptService/Classes/PlayerLike/PlayerBase.lua",
+      "source_repo": "defjunior/Astera",
+      "source_sha256": "d4d188800c0ceadb1b1dd0508e43d9ee87068839017ae9dd81b1c296238a206a",
+      "output_sha256": "d4d188800c0ceadb1b1dd0508e43d9ee87068839017ae9dd81b1c296238a206a",
+      "modified": false,
+      "lines": 279,
+      "source_parse_error": false,
+      "output_parse_error": false
+    }
+  ],
+  "method_balance": {
+    "scope": "21 revised WorldGeneration production files",
+    "real_declared_functions": 66,
+    "omitted_declared_functions": 68,
+    "total_declared_functions": 134,
+    "real_percent": 49.3,
+    "count_rule": "Named local/nested function declarations currently shown; excludes anonymous callbacks and original hidden helpers. Executable body is not runtime validation."
+  }
+}
