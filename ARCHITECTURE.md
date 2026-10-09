@@ -1,5 +1,11 @@
 # Architecture without the optimization recipe
 
+## World-gen organization (October 9)
+
+Reviewed implementations now sit under Runtime, Sampling/Modifiers, Terrain, Structures, Topology, Decoration/Legacy, Streaming, Authoring and Diagnostics. The 23 old module paths are compatibility wrappers, matching the original project's migration pattern. Features and WorldGenerationScheduler keep their existing locations. New debug/verification/config content is not imported merely because it exists in the private tree.
+
+This is a layout update, not a sync of private implementation changes. The 21 reviewed production implementations still contain 66 real of 134 declared functions (49.3%); wrappers are not counted. Omitted bodies still say "full method is omitted". Relative script dependencies were adjusted for folder depth and continue through compatibility entries; no runnable dependency-closure claim is made. See `reorganization-manifest.json` for old/new paths and hashes.
+
 This archive mixes marked original source excerpts with responsibilities and interface stubs. It deliberately does not disclose the implementation order, worker coordination, budgets, cache structure, thresholds, placement decisions or tests needed to reproduce Astera's optimized world-generation pipeline.
 
 ## World generation
@@ -16,7 +22,7 @@ This archive mixes marked original source excerpts with responsibilities and int
 
 ## Sites: a concrete mixed example
 
-`Modules/Sites.lua` retains actual read-side lookup: nearby chunk buckets refer to site records, and a local seen set prevents the same record being returned twice. `GetPlacementCFrame` places a resolved record at its pad height; the footprint extent helper shows a simple circle/rectangle distinction. The registration code that populates those tables is withheld. No candidate rolls, deduplication signatures, cache layout, reconciliation order, separation thresholds or terrain-flattening composition are revealed. These snippets explain what a resolved site is used for without providing a complete placement system.
+`Modules/Structures/Sites.lua` retains actual read-side lookup: nearby chunk buckets refer to site records, and a local seen set prevents the same record being returned twice. `GetPlacementCFrame` places a resolved record at its pad height; the footprint extent helper shows a simple circle/rectangle distinction. The registration code that populates those tables is withheld. No candidate rolls, deduplication signatures, cache layout, reconciliation order, separation thresholds or terrain-flattening composition are revealed. These snippets explain what a resolved site is used for without providing a complete placement system.
 
 ## How to read the code/explanation balance
 
