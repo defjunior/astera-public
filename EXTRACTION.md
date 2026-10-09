@@ -1,5 +1,11 @@
 # Source and extraction boundaries
 
+## World-gen organization (October 9)
+
+Reviewed implementations now sit under Runtime, Sampling/Modifiers, Terrain, Structures, Topology, Decoration/Legacy, Streaming, Authoring and Diagnostics. The 23 old module paths are compatibility wrappers, matching the original project's migration pattern. Features and WorldGenerationScheduler keep their existing locations. New debug/verification/config content is not imported merely because it exists in the private tree.
+
+This is a layout update, not a sync of private implementation changes. The 21 reviewed production implementations still contain 66 real of 134 declared functions (49.3%); wrappers are not counted. Omitted bodies still say "full method is omitted". Relative script dependencies were adjusted for folder depth and continue through compatibility entries; no runnable dependency-closure claim is made. See `reorganization-manifest.json` for old/new paths and hashes.
+
 ## October 8 partial-reveal revision
 
 The owner asked for both real code and explanations, explicitly allowing Sites while keeping the exact recipe private. 20 production boundaries now contain real source excerpts. The 21-file production slice contains 66 real declared functions of 134 visible declarations (49.3%); 68 bodies remain omitted. The denominator includes named local/nested helpers, excludes anonymous callbacks and original hidden helpers. The related nine tests/fixtures remain withheld. Existing standalone geometry/source and local movement remain unchanged. Selection is by responsibility rather than mechanically publishing half of every function. The original orchestration, tuning, caches, placement policy, generation composition and recipe construction remain omitted. Additional excerpts cover coordinate transforms, bounds helpers, tag/config read-side getters, collection cleanup, profiling wrappers, metadata queries, explicit-input spacing checks and spline construction. Empty omitted bodies use exactly "full method is omitted". No policy/caches/tuning/recipe implementations were restored. Source excerpts are checked against live Astera originals, with selected comment/type-only adjustments recorded.
