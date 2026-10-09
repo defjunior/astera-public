@@ -1,6 +1,6 @@
 {
-  "verified_date": "2026-10-08",
-  "status": "Private architecture/selected source; history still holds earlier implementations.",
+  "verified_date": "2026-10-09",
+  "status": "Public reviewed showcase; Oct 8 root cleanup followed by approved reorganization commits. Earlier exposed objects/copies are not guaranteed erased.",
   "files": [
     {
       "path": "src/ServerScriptService/WorldGeneration/init.server.lua",
@@ -42,22 +42,24 @@
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/SimpleStreamHorizon.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "World streaming interface. Reports lifecycle state and connects interest updates; selection, reuse and worker policy are private.",
       "previous_sha256": "5b2f262fa5890fb72d9ec20cadd28d4ba48a112893899f35e0bfc843c0054e0c",
-      "output_sha256": "a8a4744f5205d58f9c5f60a161056daae4b6ce3387f164a531790ef0ae86ade8",
-      "lines": 34,
+      "output_sha256": "366622950321f7db476f3b3b4c6d1a1b9104bd285f856fbbc91a7c7adba4d1c5",
+      "lines": 2,
       "restored_functions": [],
       "live_source_sha256": "5b2f262fa5890fb72d9ec20cadd28d4ba48a112893899f35e0bfc843c0054e0c",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Streaming/SimpleStreamHorizon.lua",
+      "source_sha256": "366622950321f7db476f3b3b4c6d1a1b9104bd285f856fbbc91a7c7adba4d1c5"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/Gen.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "Terrain generation interface. Creates and maintains terrain geometry; generation/merge/culling implementation is private.",
       "previous_sha256": "ceb045c79ab54df148e1eea66aedd291fd99f420fd7f80142039374519f368bd",
-      "output_sha256": "50293cafa3429194a53e118f3914723670ec40142993a639bab0d8f074b04206",
-      "lines": 163,
+      "output_sha256": "fca5bfab88bc14681d3b568eb7a3223f0588d9177b4355e80895abe23bc2956a",
+      "lines": 2,
       "restored_functions": [
         "TerrainModule.IsPointInVolume",
         "TerrainModule.IsPartInBoundary",
@@ -65,52 +67,60 @@
         "TerrainModule.SolidifyTerrain"
       ],
       "live_source_sha256": "ceb045c79ab54df148e1eea66aedd291fd99f420fd7f80142039374519f368bd",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Terrain/Gen.lua",
+      "source_sha256": "fca5bfab88bc14681d3b568eb7a3223f0588d9177b4355e80895abe23bc2956a"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/HeightSampler.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "Elevation query interface. Returns terrain-height information; sampling composition and caching are private.",
       "previous_sha256": "2f0f958ba942d394919f2f2f2de453ed2a8f83c78ee382c0ffaa18b7edcaf833",
-      "output_sha256": "8c9fc1153f742f4b349b2cc931c17acf4be32c2446d524437b7cdbd519912895",
-      "lines": 34,
+      "output_sha256": "72fc208dfeacd44570922203159405ca528dc03fd2bac1981738934ab82557cc",
+      "lines": 2,
       "restored_functions": [],
       "live_source_sha256": "2f0f958ba942d394919f2f2f2de453ed2a8f83c78ee382c0ffaa18b7edcaf833",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Sampling/HeightSampler.lua",
+      "source_sha256": "72fc208dfeacd44570922203159405ca528dc03fd2bac1981738934ab82557cc"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/Maps.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "Map-sampling interface. Provides named sampler families; exact sampling implementations are private.",
       "previous_sha256": "53c067db2811cba2b6af27952227b812d36ef8153be9276eba4a13d1932ff776",
-      "output_sha256": "bcb532592ebfc8d7b5a54c880aadf4368d391de86d88e71de97fc49ea348eae0",
-      "lines": 60,
+      "output_sha256": "2ea59543ad0d788f8489f3813fd35dfc677660bef6141fc85c789acbfa866e9a",
+      "lines": 2,
       "restored_functions": [
         "lerp",
         "clamp",
         "isign"
       ],
       "live_source_sha256": "53c067db2811cba2b6af27952227b812d36ef8153be9276eba4a13d1932ff776",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Sampling/Maps.lua",
+      "source_sha256": "2ea59543ad0d788f8489f3813fd35dfc677660bef6141fc85c789acbfa866e9a"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/BiomeResolver.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "Biome query interface. Provides environmental labels and settings; query/blending/cache policy is private.",
       "previous_sha256": "a36b75095e03515416b5fec62312e2e57a9361f918371cd4eaded369380c759a",
-      "output_sha256": "92c7167997909242308df07d0cb90732583afd238d38185ea9413c2069dbab38",
-      "lines": 121,
+      "output_sha256": "c0c8f8bf608d5a55d85d280289c8669f212a1da4ffa023bdcee32d69b3f422c1",
+      "lines": 2,
       "restored_functions": [],
       "live_source_sha256": "a36b75095e03515416b5fec62312e2e57a9361f918371cd4eaded369380c759a",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Sampling/BiomeResolver.lua",
+      "source_sha256": "c0c8f8bf608d5a55d85d280289c8669f212a1da4ffa023bdcee32d69b3f422c1"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/Sites.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "Structure placement interface. Links placement requests to terrain; selection, reconciliation and caches are private.",
       "previous_sha256": "e32eabecfd390552c1759eb5ad8f77e5471bcd18e264b8a95aaeea059caea772",
-      "output_sha256": "eee822a951ab804275ff6231710000bf6ff49b22285324788fb0f65e939812ed",
-      "lines": 76,
+      "output_sha256": "41f57cd5d22691fa6dc4795ea218caf8cd4abaf8d4e39a4f5a93924bad066027",
+      "lines": 2,
       "restored_functions": [
         "Sites.GetSitesNearChunk",
         "Sites.GetPlacementCFrame",
@@ -118,81 +128,95 @@
         "padRadius"
       ],
       "live_source_sha256": "e32eabecfd390552c1759eb5ad8f77e5471bcd18e264b8a95aaeea059caea772",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Structures/Sites.lua",
+      "source_sha256": "41f57cd5d22691fa6dc4795ea218caf8cd4abaf8d4e39a4f5a93924bad066027"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/MicroTerrain.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "Local terrain-detail interface. Accepts a chunk context; detail emission and resource policy are private.",
       "previous_sha256": "18a3605cff3efca724c32fdf82dc5d18bb0b9d4a5c78e2d83980934e9854aa73",
-      "output_sha256": "87814ca3c891f015281d3893bcdfcd9b19dde892716de3cb7065fa12ca5321fe",
-      "lines": 30,
+      "output_sha256": "6ae893a2f4e4b9bcd7c82d614174559edd0b668735fd6bbcdd4e03fbb41ddda0",
+      "lines": 2,
       "restored_functions": [],
       "live_source_sha256": "18a3605cff3efca724c32fdf82dc5d18bb0b9d4a5c78e2d83980934e9854aa73",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Terrain/MicroTerrain.lua",
+      "source_sha256": "6ae893a2f4e4b9bcd7c82d614174559edd0b668735fd6bbcdd4e03fbb41ddda0"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/PropsParallel/init.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "Prop placement interface. Connects placement requests to world geometry; worker and placement implementation is private.",
       "previous_sha256": "5b55dc90f740ac9fbcf33de0fd8d31f0d6f4b6f58469bc96fced7c8b8bbc3b70",
-      "output_sha256": "d20e39f9ade2121a5b2ec865f9749d3a6e5174e2c947bcd72e1721a8b9d20f63",
-      "lines": 73,
+      "output_sha256": "8902138b37f39a196a3eef3ec024883dababf05347fa324061f07ba4ef5cc15a",
+      "lines": 2,
       "restored_functions": [
         "scaleModel",
         "isMicroTerrainPart"
       ],
       "live_source_sha256": "5b55dc90f740ac9fbcf33de0fd8d31f0d6f4b6f58469bc96fced7c8b8bbc3b70",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Decoration/PropsParallel/init.lua",
+      "source_sha256": "8902138b37f39a196a3eef3ec024883dababf05347fa324061f07ba4ef5cc15a"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/Props/init.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "Prop placement interface. Accepts placement requests; implementation is withheld with its parallel counterpart.",
       "previous_sha256": "974a0914164316314b582c526673781d4ebc71f668d97bce6332d780bcf325bc",
-      "output_sha256": "a72c9df23fdb94d802d203304d6baf9779463dd72a48db2e809f7ab2fcaa6521",
-      "lines": 47,
+      "output_sha256": "0ae6c467e2f039048dff43b41b1216880feec2afcb91947cba9777dfc12f8435",
+      "lines": 2,
       "restored_functions": [
         "scaleModel"
       ],
       "live_source_sha256": "974a0914164316314b582c526673781d4ebc71f668d97bce6332d780bcf325bc",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Decoration/Legacy/Props/init.lua",
+      "source_sha256": "0ae6c467e2f039048dff43b41b1216880feec2afcb91947cba9777dfc12f8435"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/FloatingPropsParallel.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "Floating decoration interface. Accepts placement requests; parallel placement implementation is private.",
       "previous_sha256": "08c50d9ffcfc88804105d74e94bb4dfc5284646e42f08239d44dec06fb40e251",
-      "output_sha256": "c59b0ff389b87bf8ae5f190bc2cf6988e50871700ddc86b094291d2107c824f5",
-      "lines": 38,
+      "output_sha256": "da00164618bc03f77a0430663f61541c640cebcac56c3813d8cc6f7ea6f02635",
+      "lines": 2,
       "restored_functions": [],
       "live_source_sha256": "08c50d9ffcfc88804105d74e94bb4dfc5284646e42f08239d44dec06fb40e251",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Decoration/FloatingPropsParallel.lua",
+      "source_sha256": "da00164618bc03f77a0430663f61541c640cebcac56c3813d8cc6f7ea6f02635"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/WorldAuthoringAdapter.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "Authoring-preview interface. Connects tooling to world queries; exact pipeline reconstruction paths are private.",
       "previous_sha256": "c4944d75b74524c1f41c03dee23a16cc309d5715aed57c3303906f91fa5d353d",
-      "output_sha256": "7908842b873acddf0f82d2b1adbfd4316d8596a8a1ab2eff9d65457ab9da01c1",
-      "lines": 73,
+      "output_sha256": "dec493a255c45f0ce8590dd19795d06bed18626fec1db1035de1e95d975af482",
+      "lines": 2,
       "restored_functions": [],
       "live_source_sha256": "f4350168c8b944d3ef0051908212f63416a7aa4d63f85ac52a461b71a1f44970",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Authoring/WorldAuthoringAdapter.lua",
+      "source_sha256": "dec493a255c45f0ce8590dd19795d06bed18626fec1db1035de1e95d975af482"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Modules/WorldGenAudit.lua",
-      "kind": "mixed_source_explanation",
+      "kind": "compatibility_wrapper",
       "reason": "Audit interface. Exposes diagnostic entry points; implementation that exercises the private pipeline is withheld.",
       "previous_sha256": "74b1d140459f4d7951a1e07badf4acf5b9023c0c701bc0ba54cdbc413d0b6497",
-      "output_sha256": "e00c8c87afbf25d5a785c3a670cc78358b366ea663e0d552c247f55a15352d58",
-      "lines": 86,
+      "output_sha256": "328241ec61f4e689cd04828dfda38fb4e3d52641f87b4ec3eb0a31c7c7cf3afd",
+      "lines": 2,
       "restored_functions": [
         "percentile",
         "summarize"
       ],
       "live_source_sha256": "74b1d140459f4d7951a1e07badf4acf5b9023c0c701bc0ba54cdbc413d0b6497",
-      "modified": true
+      "modified": true,
+      "forwards_to": "src/ServerScriptService/WorldGeneration/Modules/Diagnostics/WorldGenAudit.lua",
+      "source_sha256": "328241ec61f4e689cd04828dfda38fb4e3d52641f87b4ec3eb0a31c7c7cf3afd"
     },
     {
       "path": "src/ServerScriptService/WorldGeneration/Features/FeaturePlanner.lua",
@@ -375,6 +399,196 @@
       "previous_sha256": "faf110fba8bd3b4235b965844943153750b546d81f18e4074ff51d95227fa804",
       "output_sha256": "2b6f363451ffc6df9ea6b64e91ed25b5f072f723082212bff604d94acfba0d29",
       "lines": 663
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Streaming/SimpleStreamHorizon.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "World streaming interface. Reports lifecycle state and connects interest updates; selection, reuse and worker policy are private.",
+      "previous_sha256": "5b2f262fa5890fb72d9ec20cadd28d4ba48a112893899f35e0bfc843c0054e0c",
+      "output_sha256": "a8a4744f5205d58f9c5f60a161056daae4b6ce3387f164a531790ef0ae86ade8",
+      "lines": 34,
+      "restored_functions": [],
+      "live_source_sha256": "5b2f262fa5890fb72d9ec20cadd28d4ba48a112893899f35e0bfc843c0054e0c",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/SimpleStreamHorizon.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "4237d555936450fee987320191dc247a9c6056b4470335202d8f9a03a4bdec2a"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Structures/Sites.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Structure placement interface. Links placement requests to terrain; selection, reconciliation and caches are private.",
+      "previous_sha256": "e32eabecfd390552c1759eb5ad8f77e5471bcd18e264b8a95aaeea059caea772",
+      "output_sha256": "eee822a951ab804275ff6231710000bf6ff49b22285324788fb0f65e939812ed",
+      "lines": 76,
+      "restored_functions": [
+        "Sites.GetSitesNearChunk",
+        "Sites.GetPlacementCFrame",
+        "key",
+        "padRadius"
+      ],
+      "live_source_sha256": "e32eabecfd390552c1759eb5ad8f77e5471bcd18e264b8a95aaeea059caea772",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/Sites.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "e32eabecfd390552c1759eb5ad8f77e5471bcd18e264b8a95aaeea059caea772"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Terrain/MicroTerrain.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Local terrain-detail interface. Accepts a chunk context; detail emission and resource policy are private.",
+      "previous_sha256": "18a3605cff3efca724c32fdf82dc5d18bb0b9d4a5c78e2d83980934e9854aa73",
+      "output_sha256": "87814ca3c891f015281d3893bcdfcd9b19dde892716de3cb7065fa12ca5321fe",
+      "lines": 30,
+      "restored_functions": [],
+      "live_source_sha256": "18a3605cff3efca724c32fdf82dc5d18bb0b9d4a5c78e2d83980934e9854aa73",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/MicroTerrain.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "180778cd583d2968864ffb0c62e535363b7a88eea08c870e78823a9ba64f15a8"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Sampling/HeightSampler.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Elevation query interface. Returns terrain-height information; sampling composition and caching are private.",
+      "previous_sha256": "2f0f958ba942d394919f2f2f2de453ed2a8f83c78ee382c0ffaa18b7edcaf833",
+      "output_sha256": "724846443c32b171766f5815d3f10882f5e37a1a14ff8a2627078e04824421ef",
+      "lines": 34,
+      "restored_functions": [],
+      "live_source_sha256": "2f0f958ba942d394919f2f2f2de453ed2a8f83c78ee382c0ffaa18b7edcaf833",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/HeightSampler.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "3cf3324453180bf8d3a4bf626331e54df4146bd1f2477f8f0cd82e21732457b0"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Decoration/Legacy/Props/init.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Prop placement interface. Accepts placement requests; implementation is withheld with its parallel counterpart.",
+      "previous_sha256": "974a0914164316314b582c526673781d4ebc71f668d97bce6332d780bcf325bc",
+      "output_sha256": "a72c9df23fdb94d802d203304d6baf9779463dd72a48db2e809f7ab2fcaa6521",
+      "lines": 47,
+      "restored_functions": [
+        "scaleModel"
+      ],
+      "live_source_sha256": "974a0914164316314b582c526673781d4ebc71f668d97bce6332d780bcf325bc",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/Props/init.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "974a0914164316314b582c526673781d4ebc71f668d97bce6332d780bcf325bc"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Diagnostics/WorldGenAudit.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Audit interface. Exposes diagnostic entry points; implementation that exercises the private pipeline is withheld.",
+      "previous_sha256": "74b1d140459f4d7951a1e07badf4acf5b9023c0c701bc0ba54cdbc413d0b6497",
+      "output_sha256": "e00c8c87afbf25d5a785c3a670cc78358b366ea663e0d552c247f55a15352d58",
+      "lines": 86,
+      "restored_functions": [
+        "percentile",
+        "summarize"
+      ],
+      "live_source_sha256": "74b1d140459f4d7951a1e07badf4acf5b9023c0c701bc0ba54cdbc413d0b6497",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/WorldGenAudit.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "4b5ca96a8f1f40d25b5f99db56a36fe8962f86db20a13fe5feb676b229727cd7"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Authoring/WorldAuthoringAdapter.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Authoring-preview interface. Connects tooling to world queries; exact pipeline reconstruction paths are private.",
+      "previous_sha256": "c4944d75b74524c1f41c03dee23a16cc309d5715aed57c3303906f91fa5d353d",
+      "output_sha256": "7908842b873acddf0f82d2b1adbfd4316d8596a8a1ab2eff9d65457ab9da01c1",
+      "lines": 73,
+      "restored_functions": [],
+      "live_source_sha256": "f4350168c8b944d3ef0051908212f63416a7aa4d63f85ac52a461b71a1f44970",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/WorldAuthoringAdapter.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "45ab770b5c56ad64cc863e966c85668529fdf71852d87ca4e9b11165413df11e"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Decoration/FloatingPropsParallel.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Floating decoration interface. Accepts placement requests; parallel placement implementation is private.",
+      "previous_sha256": "08c50d9ffcfc88804105d74e94bb4dfc5284646e42f08239d44dec06fb40e251",
+      "output_sha256": "c59b0ff389b87bf8ae5f190bc2cf6988e50871700ddc86b094291d2107c824f5",
+      "lines": 38,
+      "restored_functions": [],
+      "live_source_sha256": "08c50d9ffcfc88804105d74e94bb4dfc5284646e42f08239d44dec06fb40e251",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/FloatingPropsParallel.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "08c50d9ffcfc88804105d74e94bb4dfc5284646e42f08239d44dec06fb40e251"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Sampling/BiomeResolver.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Biome query interface. Provides environmental labels and settings; query/blending/cache policy is private.",
+      "previous_sha256": "a36b75095e03515416b5fec62312e2e57a9361f918371cd4eaded369380c759a",
+      "output_sha256": "38aa4f5b833a120c2377ee8ca826ddb7610d9992a7be7345873937a039944111",
+      "lines": 121,
+      "restored_functions": [],
+      "live_source_sha256": "a36b75095e03515416b5fec62312e2e57a9361f918371cd4eaded369380c759a",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/BiomeResolver.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "c9b79b9263a0e73e49d9f8f946fded4bb5d17d0a54b75b009fa57ce50f5061d7"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Terrain/Gen.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Terrain generation interface. Creates and maintains terrain geometry; generation/merge/culling implementation is private.",
+      "previous_sha256": "ceb045c79ab54df148e1eea66aedd291fd99f420fd7f80142039374519f368bd",
+      "output_sha256": "50293cafa3429194a53e118f3914723670ec40142993a639bab0d8f074b04206",
+      "lines": 163,
+      "restored_functions": [
+        "TerrainModule.IsPointInVolume",
+        "TerrainModule.IsPartInBoundary",
+        "TerrainModule.ClearTerrainAccessories",
+        "TerrainModule.SolidifyTerrain"
+      ],
+      "live_source_sha256": "ceb045c79ab54df148e1eea66aedd291fd99f420fd7f80142039374519f368bd",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/Gen.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "f9249a6940501c7c5f7c12c5c7e59a9e3dd8b55f858a0ee4b666037e12b74e5c"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Decoration/PropsParallel/init.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Prop placement interface. Connects placement requests to world geometry; worker and placement implementation is private.",
+      "previous_sha256": "5b55dc90f740ac9fbcf33de0fd8d31f0d6f4b6f58469bc96fced7c8b8bbc3b70",
+      "output_sha256": "d20e39f9ade2121a5b2ec865f9749d3a6e5174e2c947bcd72e1721a8b9d20f63",
+      "lines": 73,
+      "restored_functions": [
+        "scaleModel",
+        "isMicroTerrainPart"
+      ],
+      "live_source_sha256": "5b55dc90f740ac9fbcf33de0fd8d31f0d6f4b6f58469bc96fced7c8b8bbc3b70",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/PropsParallel/init.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "5b55dc90f740ac9fbcf33de0fd8d31f0d6f4b6f58469bc96fced7c8b8bbc3b70"
+    },
+    {
+      "path": "src/ServerScriptService/WorldGeneration/Modules/Sampling/Maps.lua",
+      "kind": "mixed_source_explanation",
+      "reason": "Map-sampling interface. Provides named sampler families; exact sampling implementations are private.",
+      "previous_sha256": "53c067db2811cba2b6af27952227b812d36ef8153be9276eba4a13d1932ff776",
+      "output_sha256": "bcb532592ebfc8d7b5a54c880aadf4368d391de86d88e71de97fc49ea348eae0",
+      "lines": 60,
+      "restored_functions": [
+        "lerp",
+        "clamp",
+        "isign"
+      ],
+      "live_source_sha256": "53c067db2811cba2b6af27952227b812d36ef8153be9276eba4a13d1932ff776",
+      "modified": true,
+      "relocated_from": "src/ServerScriptService/WorldGeneration/Modules/Maps.lua",
+      "relocation_note": "Reviewed public body preserved; script.Parent references adjusted for folder depth using old-path compatibility wrappers. No fresh private bodies copied.",
+      "live_reorganized_source_sha256": "53c067db2811cba2b6af27952227b812d36ef8153be9276eba4a13d1932ff776"
     }
   ],
   "removed_files": [
@@ -405,7 +619,7 @@
     "src/ServerScriptService/Services/Progression/PersistenceService/init.lua"
   ],
   "partial_reveal_note": "Marked local source excerpts plus explanations; owner review pending. Private; earlier implementations remain in history.",
-  "comparison_note": "Live destination hash/readback checked after method-balance and exact omission-comment revision; source selection verified against live Astera; no runtime validation. Private, owner review pending, earlier full code remains in history.",
+  "comparison_note": "23 reviewed implementations relocated to current Astera layout; 23 old paths forward through live-source compatibility wrappers. No runtime validation or private-body restoration.",
   "method_balance": {
     "scope": "21 revised WorldGeneration production files",
     "real_declared_functions": 66,
@@ -413,5 +627,6 @@
     "total_declared_functions": 134,
     "real_percent": 49.3,
     "count_rule": "Named local/nested function declarations currently shown; excludes anonymous callbacks and original hidden helpers. Executable body is not runtime validation."
-  }
+  },
+  "reorganization_note": "Eight partial copies from Oct 8 retained; all moves completed Oct 9. Ratio refers to relocated 21 production implementations, excluding wrappers."
 }
